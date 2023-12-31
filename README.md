@@ -144,17 +144,23 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
       <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/6f2b622a-c549-4272-a555-6534e5424498" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p> 
     </ul>
-    <li>On your physical desktop, head to the Azure Portal and select VM2 to obtain the <b>Private IP Address</b> and copy it</li>
+    <li>On your physical desktop, head to the Azure Portal and select VM2 to obtain the <b>Private IP Address</b> and copy it (NOTE: Your VM's private IP's may be different, in this instance VM1's IP is 10.0.0.4, while VM2's is 10.0.0.5) </li>
     <ul>
-    <li><img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
+    <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/b492ceaf-f5de-4801-aeaf-baf643d25263" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+    </p> 
     </ul>
-    <li>Open <b>Windows Powershell</b> on VM1 and in the command line enter <b>ping</b> and the private IP of VM2. ICMP packets should now display in Wireshark</li>
+    <li>Open <b>Windows Powershell</b> on VM1 and in the command line enter <b>ping</b> and the private IP of VM2. ICMP packets should now display in Wireshark. Our virtual machines are now talking to each other!</li>
     <ul>
-    <li><img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+      <p align="center">
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/0cba0bee-1618-438d-af2a-bb647aeb139b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      </p> 
     </ul>
     <li>We will now start a perpetual / non-stop ping between the Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing nonstop ICMP packets displaying in Wireshark</li>
     <ul>
-    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/474bfaac-5695-43dc-9f55-63d2ded0ccba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    <p align="center">
+      <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      </p> 
     </ul>
     <li>Heading back to the Microsoft Azure Account, we'll go to the VM-2's <b>Network Security Group (NSG)</b> (which should be named <i>VM-2-nsg</i>) in order to halt the traffic</li>
     <li>In VM-2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> to open a right side pop up to set the rule and dot in <b>Deny</b> under action and <b>ICMP</b> under Protocol. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENY_ICMP_PING</b> then click <b>Add</b> to finish</li>
