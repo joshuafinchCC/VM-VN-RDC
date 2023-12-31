@@ -68,7 +68,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
         <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/d57dcad0-6d78-46cd-a5ec-c13da5f83e90" height="80%" width="80%" alt="Disk Sanitization Steps"/>
         </p>
       </ul>
-      <li>On the <b>Network</b> tab, you'll notice a <b>Virtual Network</b> was created by the Virtual Machine automatically. You can keep all these setings on default</li>
+      <li>On the <b>Network</b> tab, you'll notice a <b>Virtual Network</b> was created by the Virtual Machine automatically. You can keep all these settings on default</li>
       <ul>
         <p align="center">
         <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/a8f1579d-d744-45e4-9a1b-4815bbf523f9" height="80%" width="80%">
