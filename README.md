@@ -60,12 +60,12 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
       <li>The <b>Size</b> selected dicates the general processing power and RAM of our VM, for this tutorial we'll set it to <i>Standard_E2s_V3</i> which provides 2 virtual CPUs and 16 GBs of RAM</li>
       <ul>
        <p align="center">
-        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/48302ec2-049c-4a76-a01e-62981e38a57e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/48302ec2-049c-4a76-a01e-62981e38a57e" height="80%" width="80%"/>
        </p>
       <li>Set the username and password of your VM for logging in (you will need to remember this login for Remote Desktop Connection) and check the box at the bottom for licensing agreement</li>
       <ul>
         <p align="center">
-        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/d57dcad0-6d78-46cd-a5ec-c13da5f83e90" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/d57dcad0-6d78-46cd-a5ec-c13da5f83e90" height="80%" width="80%" />
         </p>
       </ul>
       <li>On the <b>Network</b> tab, you'll notice a <b>Virtual Network</b> was created by the Virtual Machine automatically. You can keep all these settings on default</li>
@@ -86,7 +86,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
       <li>Ubuntu by default has their Administrator Account authentication as SSH public key, so we must set it as Password for logging in through Remote Desktop</li>
       <ul>
         <p align="center">
-        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/a62f621e-7aa6-4526-a934-fff178b3aece" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/a62f621e-7aa6-4526-a934-fff178b3aece" height="80%" width="80%"/>
         </p> 
       </ul>
     </ul>
@@ -102,19 +102,19 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
    <li>Once again use the <b>Azure Portal</b>, go to <b>Virtual Machines</b> and select VM1. From here we can obtain the <b>Public IP Address</b> which we will use to connect to it via Remote Desktop Connection</li>
     <ul>
        <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/83903cce-5359-4920-9882-c42ebbb0ffd3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/83903cce-5359-4920-9882-c42ebbb0ffd3" height="80%" width="80%" />
        </p> 
     </ul>
     <li> Open your start menu and search "Remote Desktop Connection". Copy VM1's PUBLIC IP address and click <b>Connect</b>. You may have your personal computers log in username appear, hit "more choices" and enter in the Username and Password you set for VM1 (a pop up may show up for verification, just click on "Yes")</li>
     <ul>
       <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/7e183bd9-bf28-4ff5-acde-e319d236bfc2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/7e183bd9-bf28-4ff5-acde-e319d236bfc2" height="80%" width="80%"/>
       </p> 
     </ul>
     <li>You have now successfully logged into your virtual machine via Remote Desktop Connection!</li>
     <ul>
       <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/30b2c143-6646-49cc-a80d-9ec726b4c818" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/30b2c143-6646-49cc-a80d-9ec726b4c818" height="80%" width="80%"/>
       </p> 
     </ul>
   </ul>
@@ -141,41 +141,41 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     <li>Once installed, open Wireshark and click the blue fin icon in the top left to begin capturing traffic. In the filter bar, type <b>icmp</b> to filter incoming ICMP packets. Think of this traffic as a sort of "network diagnostic" traffic. When we ping VM2, we will see it here</li>
     <ul>
     <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/6f2b622a-c549-4272-a555-6534e5424498" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/6f2b622a-c549-4272-a555-6534e5424498" height="80%" width="80%"/>
     </p> 
     </ul>
     <li>On your physical desktop, head to the Azure Portal and select VM2 to obtain the <b>Private IP Address</b> and copy it (NOTE: Your VM's private IP's may be different, in this instance VM1's IP is 10.0.0.4, while VM2's is 10.0.0.5) </li>
     <ul>
     <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/b492ceaf-f5de-4801-aeaf-baf643d25263" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/b492ceaf-f5de-4801-aeaf-baf643d25263" height="50%" width="50%"/>
     </p> 
     </ul>
     <li>Open <b>Windows Powershell</b> on VM1 and in the command line enter <b>ping</b> and the private IP of VM2. ICMP packets should now display in Wireshark. Our virtual machines are now talking to each other!</li>
     <ul>
       <p align="center">
-    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/0cba0bee-1618-438d-af2a-bb647aeb139b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/0cba0bee-1618-438d-af2a-bb647aeb139b" height="80%" width="80%"/>
       </p> 
     </ul>
     <li>We can now set up a non-stop ping between the two Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing a consistent stream of ICMP packets displaying in Wireshark. Afterwards we can set up some inbound security rules to block this traffic</li>
     <ul>
     <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/1e4056b0-2fad-42e0-8ac3-fb58eecc5804" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/1e4056b0-2fad-42e0-8ac3-fb58eecc5804" height="80%" width="80%"/>
       </p> 
     </ul>
     <li>Heading back to the Azure Portal and selecting your resource group (VMRG) we can find VM2's <b>Network Security Group </b> (which should be named <i>VM2-nsg</i>) in order to halt the traffic</li>
      <p align="center">
-<img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/f6ab07ac-d401-40d1-b6f9-3862e9ae26b2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/f6ab07ac-d401-40d1-b6f9-3862e9ae26b2" height="80%" width="80%"/>
     </p> 
     <li>In VM2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> and select <b>ICMP</b> as the protocol to <b>Deny</b> under action. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENYICMP</b> then click <b>Add</b> to finish</li>
     <ul>
     <p align="center">
-      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/97ad35fa-a791-4bbb-88f5-7120bd6ec7fd" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/97ad35fa-a791-4bbb-88f5-7120bd6ec7fd" height="80%" width="80%"/>
     </p> 
     </ul>
     <li>Once completed, you'll notice the message "Request timed out" will start displaying in Powershell in VM-1, meaning ICMP ping has been halted from our security rule</li>
     <ul>
       <p align="center">
-    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/20fbafdf-b89c-4b89-b1b4-5801d411c195" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/20fbafdf-b89c-4b89-b1b4-5801d411c195" height="80%" width="80%"/>
       </p> 
     </ul>
     <li>To reinstate the traffic, simply head back to VM2's NSG and set the DENYICMP inbound rule's action to <b>Allow</b> and save</li>
@@ -203,7 +203,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
   <ul>Filter DHCP Traffic in Wireshark by entering <b>dhcp</b> in the filter bar</ul>
   <ul>DHCP assigns IP Addresses to new devices on the network. We can re-assign an IP Address to VM1 by going to Powershell an enterning the command <b>ipconfig /renew</b></ul>
 <p align="center">
-    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/25a43434-a0fe-4c3c-916e-1021c7d08441" height="80%" width="80%" alt="Disk Sanitization Steps"/> </p> 
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/25a43434-a0fe-4c3c-916e-1021c7d08441" height="80%" width="80%"/> </p> 
 
 
 <br/>
@@ -216,7 +216,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     <li>In Powershell, you can type <b>nslookup</b> and a website such as "www.google.com" and observe the DNS traffic in wireshark</li>
   </ul>
 <p align="center">
-    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/367e237c-5fae-4a8d-b9b7-6fd19c66297b" height="80%" width="80%" alt="Disk Sanitization Steps"/> </p> 
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/367e237c-5fae-4a8d-b9b7-6fd19c66297b" height="80%" width="80%"/> </p> 
 
 <br/>
 
