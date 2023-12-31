@@ -35,26 +35,21 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 <h2>List of Prerequisites</h2>
 <ol>
   <li>Microsoft Azure Account and Subscription</li>
-  <li>Access to Microsoft Remote Desktop Connection</li>
-  <ul>
-    <li>For MacOS users, follow <a href = "https://www.youtube.com/watch?v=0lllpAhgAJs&ab_channel=TheHostingVideos">this video</a> to use Remote Desktop on Mac</li>
-  </ul>
-  <li>(OPTIONAL): Notepad for typing down log in information for our Virtual Machines</li>
+  <li>Access to Microsoft Remote Desktop Connection (installed on Windows OS by default)</li>
+  <li>(OPTIONAL): Notepad- We will be noting several specific IP addresses during this tutorial </li>
 </ol>
 
 <h2>Installation Steps</h2>
 
-<h3>Creating our Resource Group and Virtual Machines</h3>
+<h3>Creating our Virtual Machines</h3>
 
 <p>
   <ul>
     <li><b>Resource Group</b></li>
       <ul>
-       <li>Through <b>Azure Services</b>, go to <b>Resource groups</b> to create a Resource Group and name your Resource Group <b>RG-VM</b>. Take note of the <b>Region</b> of your Resouce Group as it'll come in play when setting up our VMs. Once done, then click on <b>Review + Create</b></li>
-        <ul>
-          <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/89c6d771-64e6-495f-959c-640e482cc8a2" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
-        </ul>
-      </ul>
+       <li>To create a virtual machine we will first need to create a resource group. You can check out my <a href = "">Resource Group Guide</a>  </li>
+        
+   </ul>
     <li><b>Virtual Machine 1 using Windows 10</b></li>
     <ul>
       <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> to create an Azure Virtual Machine. Select the Resource group we've created (RG-VM) and name the virtual machine <b>VM-1</b>. Make sure the <b>Region</b> is the same as your Resource Group and we'll set our <b>Availability Options</b> set to <i>No infrastructure</i> and <b>Security Type</b> to <i>Standard</i> for this tutorial</li>
