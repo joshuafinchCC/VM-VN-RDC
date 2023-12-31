@@ -48,11 +48,14 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     <li><b>Resource Group</b></li>
       <ul>
        <li>To create a virtual machine we will first need to create a resource group. You can check out my <a href = "https://github.com/joshuafinchCC/azure-portal/tree/main">Resource Group Guide</a>. For the purposes of this tutorial, lets name it VMRG.  </li>
+
+![image](https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/89ae91dc-4d6b-4157-af4c-185d7c7a0cd5)
+    
         
    </ul>
     <li><b>Virtual Machine 1 using Windows 10</b></li>
     <ul>
-      <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> to create an Azure Virtual Machine. Select the Resource group we've created (RG-VM) and name the virtual machine <b>VM-1</b>. Make sure the <b>Region</b> is the same as your Resource Group and we'll set our <b>Availability Options</b> set to <i>No infrastructure</i> and <b>Security Type</b> to <i>Standard</i> for this tutorial</li>
+      <li>On the <b>Azure Services Portal</b> go to <b>Virtual Machines</b> and click create, followed by "Azure virtual machine". Select the Resource group we've created (VMRG) and name the virtual machine <b>VM1</b>. The <b>Region</b> SHOULD default to the same as the resource group, but if not, set it to the same region. Set the <b>Availability Options</b> set to <i>No infrastructure</i> and <b>Security Type</b> to <i>Standard</i> for this tutorial</li>
       <li>Set the <b>Image</b> (our Operating System) to <i>Windows 10 Pro, Version 22H2, x64 Gen2</i></li>
       <li>The <b>Size</b> selected dicates the general processing power and RAM of our VM, for this tutorial we'll set it to <i>Standard_E2s_V3</i> which provides 2 virtual CPUs and 16 GBs of RAM</li>
       <ul>
