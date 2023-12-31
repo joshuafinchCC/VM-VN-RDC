@@ -82,7 +82,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     </ul>
     <li><b>Virtual Machine 2 using Ubuntu</b></li>
     <ul>
-      <li>This is the same process as Virtual Machine 1 but we'll name the VM <b>VM2</b> and set the Image to <i>Ubuntu Server 20.04 LTS x64 Gen2</i> (this will be our linux operating system!) Make Sure this VM is under the same resource group, region, and virtual network as your first one</li>
+      <li>This is the same process as Virtual Machine 1 but we'll name the VM <b>VM2</b> and set the Image to <i>Ubuntu Server 20.04 LTS x64 Gen2</i> (this will be our linux operating system!) Make Sure this VM is under the same resource group and region as VM1</li>
       <li>Ubuntu by default has their Administrator Account authentication as SSH public key, so we must set it as Password for logging in through Remote Desktop</li>
       <ul>
         <p align="center">
@@ -128,7 +128,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
   <ul>
-    <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> in your VM. Downloads may be slow depending on your VM's CPU</li>
+    <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> on VM1. Through wireshark we can filter and observe ICMP, SSH, DHCP, DNS and RDP traffic </li>
   </ul>
 </p>
 
