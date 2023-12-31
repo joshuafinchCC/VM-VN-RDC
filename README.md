@@ -82,7 +82,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     </ul>
     <li><b>Virtual Machine 2 using Ubuntu</b></li>
     <ul>
-      <li>This is the same process as Virtual Machine 1 but we'll name the VM <b>VM2</b> and set the Image to <i>Ubuntu Server 20.04 LTS x64 Gen2</i> (this will be our linux operating system!) Make Sure this VM is under the same resource group and region as your first one</li>
+      <li>This is the same process as Virtual Machine 1 but we'll name the VM <b>VM2</b> and set the Image to <i>Ubuntu Server 20.04 LTS x64 Gen2</i> (this will be our linux operating system!) Make Sure this VM is under the same resource group, region, and virtual network as your first one</li>
       <li>Ubuntu by default has their Administrator Account authentication as SSH public key, so we must set it as Password for logging in through Remote Desktop</li>
       <ul>
         <p align="center">
@@ -99,9 +99,11 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
   <ul>
-   <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> and select VM-1 we've created and click on <b>Connect</b> to connect to the VM, from this page you can obtain the <b>Public IP Address</b> which we will use to connect to it via Remote Desktop Connection</li>
+   <li>Once again use the <b>Azure Portal</b>, go to <b>Virtual Machines</b> and select VM1. From here we can obtain the <b>Public IP Address</b> which we will use to connect to it via Remote Desktop Connection</li>
     <ul>
-      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/f38f8254-73c7-42a4-8b31-2bd3d328cff1" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+       <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/83903cce-5359-4920-9882-c42ebbb0ffd3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+       </p> 
     </ul>
     <li>Copy the address and paste it into Remote Desktop Connection and click on <b>Connect</b> and log in using the username and password you set up for VM-1 (a pop up may show up for verification, just click on "Yes" if it does)</li>
     <ul>
