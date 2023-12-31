@@ -111,9 +111,11 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
       <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/7e183bd9-bf28-4ff5-acde-e319d236bfc2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
       </p> 
     </ul>
-    <li>You are now successfully logged into your VM!</li>
+    <li>You have now successfully logged into your virtual machine via Remote Desktop Connection!</li>
     <ul>
-      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/a42e65d9-f9e3-4059-a04e-de51bb335d85" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+      <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/30b2c143-6646-49cc-a80d-9ec726b4c818" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      </p> 
     </ul>
   </ul>
 </p>
