@@ -74,7 +74,11 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
         <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/a8f1579d-d744-45e4-9a1b-4815bbf523f9" height="80%" width="80%">
         </p>   
       </ul>
-      <li>Then head to the <b>Review + Create</b> and click on <b>Create</b> to deploy your Virtual Machine. Give it some time to fully deploy before moving on.</li>
+      <li>Next, head to the <b>Review + Create</b> tab and wait for your settings to fully validate. Then click on <b>Create</b> to deploy your Virtual Machine. It may take a moment to fully deploy. You'll notice the setup and deployment of your virtual machine automatically created several resources: An IP, Network Security Group, Virtual Network, Network Interface and Disk!</li>
+
+ <p align="center">
+ <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/348b687c-ef53-4505-abf6-91f81437fffa" height="80%" width="80%">
+ </p>  
     </ul>
     <li><b>Virtual Machine 2 using Ubuntu</b></li>
     <ul>
