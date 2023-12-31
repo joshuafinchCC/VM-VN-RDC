@@ -59,11 +59,14 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
       <li>Set the <b>Image</b> (our Operating System) to <i>Windows 10 Pro, Version 22H2, x64 Gen2</i></li>
       <li>The <b>Size</b> selected dicates the general processing power and RAM of our VM, for this tutorial we'll set it to <i>Standard_E2s_V3</i> which provides 2 virtual CPUs and 16 GBs of RAM</li>
       <ul>
-        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/be86a82d-db6c-4d45-9961-9acc61c2aadb" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
-      </ul>
-      <li>Set the username and password of your VM for logging in and make sure to check the box for licensing agreement</li>
+       <p align="center">
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/48302ec2-049c-4a76-a01e-62981e38a57e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+       </p>
+      <li>Set the username and password of your VM for logging in (you will need to remember this login for Remote Desktop Connection) and check the box at the bottom for licensing agreement</li>
       <ul>
-        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/f4aedc00-a714-438b-bd34-5ca68694795e" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+        <p align="center">
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/d57dcad0-6d78-46cd-a5ec-c13da5f83e90" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+        </p>
       </ul>
       <li>Go to the <b>Network</b> tab and notice the <b>Virtual Network</b> created by the Virtual Machine as it should've been made by the Resource Group. It will be made automatically by the Virtual Machine</li>
       <ul>
