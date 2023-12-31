@@ -47,7 +47,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
   <ul>
     <li><b>Resource Group</b></li>
       <ul>
-       <li>To create a virtual machine we will first need to create a resource group. You can check out my <a href = "https://github.com/joshuafinchCC/azure-portal/tree/main">Resource Group Guide</a>  </li>
+       <li>To create a virtual machine we will first need to create a resource group. You can check out my <a href = "https://github.com/joshuafinchCC/azure-portal/tree/main">Resource Group Guide</a>. For the purposes of this tutorial, lets name it VMRG.  </li>
         
    </ul>
     <li><b>Virtual Machine 1 using Windows 10</b></li>
