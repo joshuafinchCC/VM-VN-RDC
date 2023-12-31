@@ -128,7 +128,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
   <ul>
-    <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> on VM1. Through wireshark we can filter and observe ICMP, SSH, DHCP, DNS and RDP traffic </li>
+    <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> (windows x64 installer) on VM1. Through wireshark we can filter and observe ICMP, SSH, DHCP, DNS and RDP traffic </li>
   </ul>
 </p>
 
@@ -138,17 +138,19 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
   <ul>
-    <li>Once installed, open Wireshark and start capturing packets (the blue fin icon). In the filter bar, type <b>icmp</b> to filter incoming ICMP packets</li>
+    <li>Once installed, open Wireshark and click the blue fin icon in the top left to begin capturing traffic. In the filter bar, type <b>icmp</b> to filter incoming ICMP packets. Think of this traffic as a sort of "network diagnostic" traffic. When we ping VM2, we will see it here</li>
     <ul>
-      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/08260fcb-734a-48fd-b202-c863b9306ab6" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/6f2b622a-c549-4272-a555-6534e5424498" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p> 
     </ul>
-    <li>Back to your physical desktop, head to your Microsoft Azure Account obtain the <b>Private IP Address</b> of VM-2 and copy it</li>
+    <li>On your physical desktop, head to the Azure Portal and select VM2 to obtain the <b>Private IP Address</b> and copy it</li>
     <ul>
-    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/14f48437-5d89-417a-b4b5-218fd845fa54" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
+    <li><img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
     </ul>
-    <li>Open up <b>Windows Powershell</b> in VM-1 and in the command line enter <b>ping</b> and the private IP of VM-2. Once done, ICMP packets should now display in Wireshark</li>
+    <li>Open <b>Windows Powershell</b> on VM1 and in the command line enter <b>ping</b> and the private IP of VM2. ICMP packets should now display in Wireshark</li>
     <ul>
-    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/a5bd2c40-4a1f-490d-90a0-3155ff281c89" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    <li><img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
     </ul>
     <li>We will now start a perpetual / non-stop ping between the Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing nonstop ICMP packets displaying in Wireshark</li>
     <ul>
