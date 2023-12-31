@@ -2,15 +2,15 @@
   <img width="600" height="300" src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/945ededb-aa45-40b7-a2d7-c44243483fc8">
 </p>
 <h1 align = "center">Virtual Machine Network in Microsoft Azure</h1>
-This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azure. 
+This tutorial demonstrates how to set up a Virtual Machine Network, as well as how to observe internet traffic between two virtual machines on the same network
 
 <br />
 
 <h2>Environments and Technologies Used</h2>
 
 <ul>
-  <li>Microsoft Azure (Virtual Machines/Compute)</li>
-  <li>Microsoft Remote Desktop</li>
+  <li>Microsoft Azure</li>
+  <li>Microsoft Remote Desktop (</li>
   <li>Windows Command Prompt</li>
   <li>Wireshark</li>
   <li>Network Protocols</li>
