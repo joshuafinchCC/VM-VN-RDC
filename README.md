@@ -156,22 +156,29 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/0cba0bee-1618-438d-af2a-bb647aeb139b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
       </p> 
     </ul>
-    <li>We will now start a perpetual / non-stop ping between the Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing nonstop ICMP packets displaying in Wireshark</li>
+    <li>We can now set up a non-stop ping between the two Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing a consistent stream of ICMP packets displaying in Wireshark. Afterwards we can set up some inbound security rules to block this traffic</li>
     <ul>
     <p align="center">
-      <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/1e4056b0-2fad-42e0-8ac3-fb58eecc5804" height="80%" width="80%" alt="Disk Sanitization Steps"/>
       </p> 
     </ul>
-    <li>Heading back to the Microsoft Azure Account, we'll go to the VM-2's <b>Network Security Group (NSG)</b> (which should be named <i>VM-2-nsg</i>) in order to halt the traffic</li>
-    <li>In VM-2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> to open a right side pop up to set the rule and dot in <b>Deny</b> under action and <b>ICMP</b> under Protocol. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENY_ICMP_PING</b> then click <b>Add</b> to finish</li>
+    <li>Heading back to the Azure Portal and selecting your resource group (VMRG) we can find VM2's <b>Network Security Group </b> (which should be named <i>VM2-nsg</i>) in order to halt the traffic</li>
+     <p align="center">
+<img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/f6ab07ac-d401-40d1-b6f9-3862e9ae26b2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p> 
+    <li>In VM2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> and select <b>ICMP</b> as the protocol to <b>Deny</b> under action. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENYICMP</b> then click <b>Add</b> to finish</li>
     <ul>
-    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/1d628322-94f9-479f-ad6d-cb2d2e3b6dba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/97ad35fa-a791-4bbb-88f5-7120bd6ec7fd" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p> 
     </ul>
     <li>Once completed, you'll notice the message "Request timed out" will start displaying in Powershell in VM-1, meaning ICMP ping has been halted from our security rule</li>
     <ul>
-    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/e7f22595-3c67-40e5-83a2-6344027b80a5" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+      <p align="center">
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/20fbafdf-b89c-4b89-b1b4-5801d411c195" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      </p> 
     </ul>
-    <li>To reinstate the traffic, simply head back to your Microsoft Azure Account and set the DENY_ICMP_PING inbound rule's action to <b>Allow</b> and save</li>
+    <li>To reinstate the traffic, simply head back to VM2's NSG and set the DENYICMP inbound rule's action to <b>Allow</b> and save</li>
   </ul>
 </p>
 
@@ -181,24 +188,23 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
 <ul>
-  <li>In Windows Powershell inside VM-1, type in <b>ssh VM-2@[VM-2's Private IP]</b> then hit Enter, enter in "yes" and it will ask for the password for VM-2</li>
-  <li>Since we are accessing the Terminal of VM-2 (essentially Linux's version of a command prompt) it doesn't diplay input/dots when typing a password but do know it is registering input when typing</li>
-  <li>Once logged in, you will be connected to the Terminal of VM-2. You can exit by entering the command <b>exit</b></li>
-  <ul>
-  <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/c8c7f09d-79e0-4426-a47c-c937947b3eba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
-  </ul>
+  <li>In Windows Powershell inside VM1, type in <b>ssh VM2@[VM2's Private IP]</b> then hit Enter, enter in "yes" and it will ask for the password for VM2 (ex. "ssh vm2@10.0.0.5")</li>
+  <li>Since we are accessing the Terminal of VM2 (essentially Linux's version of a command prompt) it doesn't diplay input/dots when typing a password, but it is definately registering input when typing</li>
+  <li>Once logged in, you will be connected to the Terminal of VM2. You can exit by entering the command <b>exit</b></li>
   <li>Typing in commands such as <i>username, pwd, or sudo apt</i> will display traffic on Wireshark, you can filter ssh traffic in Wireshark by typing in <b>ssh</b> in the filter bar</li>
 </ul>
 </p>
 
 <br />
 
-<h3>Observer DHCP (Dynamic Host Configuration Protocol) Traffic</h3>
+<h3>Observing DHCP (Dynamic Host Configuration Protocol) Traffic</h3>
 
 <p>
   <ul>Filter DHCP Traffic in Wireshark by entering <b>dhcp</b> in the filter bar</ul>
-  <ul>DHCP assigns IP Addresses to devices new to the network the moment said device joins the network. We can reassign an IP Address in the VM by going to Powershell an enterning the command <b>ipconfig /renew</b></ul>
-</p>
+  <ul>DHCP assigns IP Addresses to new devices on the network. We can re-assign an IP Address to VM1 by going to Powershell an enterning the command <b>ipconfig /renew</b></ul>
+<p align="center">
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/25a43434-a0fe-4c3c-916e-1021c7d08441" height="80%" width="80%" alt="Disk Sanitization Steps"/> </p> 
+
 
 <br/>
 
@@ -207,9 +213,10 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 <p>
   <ul>
     <li>Filter DNS traffic in Wireshark by entering <b>dns</b> in the filter bar</li>
-    <li>In Powershell, type in <b>nslookup</b> and a website such as google.com</li>
+    <li>In Powershell, you can type <b>nslookup</b> and a website such as "www.google.com" and observe the DNS traffic in wireshark</li>
   </ul>
-</p>
+<p align="center">
+    <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/367e237c-5fae-4a8d-b9b7-6fd19c66297b" height="80%" width="80%" alt="Disk Sanitization Steps"/> </p> 
 
 <br/>
 
@@ -217,18 +224,17 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <p>
   <ul>
-    <li>Filter RDP traffic in Wireshark by entering <b>tcp.port == 3389</b> in the filter bar and you'll notice non-stop traffic</li>
-    <li>This is because the RDP is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted</li>
+    <li>Filter RDP traffic in Wireshark by entering <b>tcp.port == 3389</b> in the filter bar and you'll see a stream of traffic already, can you guess why?</li>
+    <li>Since we are filtering by RDP traffic, and we are currently remotely logged into VM1, we observe the constant stream of traffic on wireshark!</li>
   </ul>
-</p>
-
+ </p> 
 <br/>
 
 <h2>Clean Up</h2>
 <ul>
   <li>Log off Remote Desktop Connection</li>
-  <li>It is advise to delete your Resource Group and VMs after finishing tinkering with them to prevent future costs, deletion of assets on Azure require verification by entering the name of the asset. Also to note, the Resource Group <b>NetworkWatcherRG</b> is created when creating NSGs for Virutal Machines and requires its own deletion</li>
+  <li>As with the resource group tutorial, it is advised to delete all your Resource Groups and VMs after you are finished experimenting. Note that when we create virtual machines, a second resource group is automatically created. </li>
   <ul>
-  <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/0f329b9c-4f52-4d9e-96ff-7aa33445cab6" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+  <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/b382e382-8ce6-42ea-98c3-0442c1cdb0e8" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </ul>
 </ul>
