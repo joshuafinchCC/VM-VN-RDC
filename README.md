@@ -68,9 +68,11 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
         <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/d57dcad0-6d78-46cd-a5ec-c13da5f83e90" height="80%" width="80%" alt="Disk Sanitization Steps"/>
         </p>
       </ul>
-      <li>Go to the <b>Network</b> tab and notice the <b>Virtual Network</b> created by the Virtual Machine as it should've been made by the Resource Group. It will be made automatically by the Virtual Machine</li>
+      <li>On the <b>Network</b> tab, you'll notice a <b>Virtual Network</b> was created by the Virtual Machine automatically. You can keep all these setings on default</li>
       <ul>
-        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/3d2688ab-110e-41cd-b60d-7c5772ccd480" height="80%" width="80%"></li>
+        <p align="center">
+        <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/a8f1579d-d744-45e4-9a1b-4815bbf523f9" height="80%" width="80%">
+        </p>   
       </ul>
       <li>Then head to the <b>Review + Create</b> and click on <b>Create</b> to deploy your Virtual Machine. Give it some time to fully deploy before moving on.</li>
     </ul>
