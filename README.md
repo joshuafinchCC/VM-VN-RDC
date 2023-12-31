@@ -107,7 +107,9 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
     </ul>
     <li> Open your start menu and search "Remote Desktop Connection". Copy VM1's PUBLIC IP address and click <b>Connect</b>. You may have your personal computers log in username appear, hit "more choices" and enter in the Username and Password you set for VM1 (a pop up may show up for verification, just click on "Yes")</li>
     <ul>
-      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/8ebbf47a-ec01-414e-8757-3eb272491e35" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+      <p align="center">
+      <img src="https://github.com/joshuafinchCC/VM-VN-RDC/assets/155266044/7e183bd9-bf28-4ff5-acde-e319d236bfc2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+      </p> 
     </ul>
     <li>You are now successfully logged into your VM!</li>
     <ul>
