@@ -10,7 +10,7 @@ This tutorial demonstrates how to set up a Virtual Machine Network, as well as h
 
 <ul>
   <li>Microsoft Azure</li>
-  <li>Microsoft Remote Desktop (</li>
+  <li>Microsoft Remote Desktop </li>
   <li>Windows Command Prompt</li>
   <li>Wireshark</li>
   <li>Network Protocols</li>
